@@ -1,23 +1,21 @@
 #include <stdio.h>
 
+#define PI 3.141592653589793
+
 int main() {
-    float height;
-    double bankBalance;
-    char phoneNumber[20];
+    double radius, height, volume, surface_area;
 
-    printf("Enter your height in meters: ");
-    scanf("%f", &height);
+    printf("Enter the radius of the cylinder: ");
+    scanf("%lf", &radius);
 
-    printf("Enter your bank balance in Kenya Shillings: ");
-    scanf("%lf", &bankBalance);
+    printf("Enter the height of the cylinder: ");
+    scanf("%lf", &height);
 
-    printf("Enter your phone number: ");
-    scanf("%19s", phoneNumber);
+    volume = PI * radius * radius * height;
+    surface_area = (2 * PI * radius * radius) + (2 * PI * radius * height);
 
-    printf("\n--- USER DETAILS ---\n");
-    printf("Height: %.2f meters\n", height);
-    printf("Bank Balance: KSh %.2f\n", bankBalance);
-    printf("Phone Number: %s\n", phoneNumber);
+    printf("Volume of the cylinder = %.2f\n", volume);
+    printf("Surface Area of the cylinder = %.2f\n", surface_area);
 
     return 0;
 }
